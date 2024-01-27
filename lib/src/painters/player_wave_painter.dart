@@ -98,22 +98,14 @@ class PlayerWavePainter extends CustomPainter {
     for (int i = 0; i < length; i++) {
       canvas.drawLine(
         Offset(
-          i * spacing +
-              dragOffset.dx -
-              totalBackDistance.dx +
-              emptySpace +
-              (waveformType.isFitWidth ? 0 : size.width / 2),
+          i * spacing + dragOffset.dx - totalBackDistance.dx + emptySpace,
           size.height / 2 +
               (showBottom
                   ? ((waveformData[i] * animValue)) * scaleFactor * scrollScale
                   : 0),
         ),
         Offset(
-          i * spacing +
-              dragOffset.dx -
-              totalBackDistance.dx +
-              emptySpace +
-              (waveformType.isFitWidth ? 0 : size.width / 2),
+          i * spacing + dragOffset.dx - totalBackDistance.dx + emptySpace,
           size.height / 2 +
               (showTop
                   ? -((waveformData[i] * animValue)) * scaleFactor * scrollScale
